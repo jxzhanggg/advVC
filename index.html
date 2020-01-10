@@ -1,0 +1,201 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- saved from url=(0038)https://jxzhanggg.github.io/Seq2SeqVC/ -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>adv VC</title>
+<style type="text/css">
+</style></head>
+<body>
+<h2><strong>Audio Samples from "Recognition-Synthesis Based Non-parallel Voice Conversion with Adversarial Learning</strong>"</h2>
+<h3>Paper:</h3>
+<p>Pre-printed paper will be released soon.</p>
+<h3>Authors: </h3>
+Jing-Xuan Zhang, Zhen-Hua Ling, Li-Rong Dai
+<h3>Abstract: </h3>
+This paper present a recognition-synthesis method for nonparallel voice conversion. A recognizer is used to transforms
+acoustic features into hidden representations while a synthesizer recovers output features from the recognizer outputs
+and the speaker identity. By separating the speaker characteristics from the hidden representations, voice conversion
+can be achieved by replacing the speaker identity with the target one. Recognizer is trained with text classification
+loss and jointly optimized with the synthesizer. Speaker adversarial training is further adopted to make hidden
+representations speaker-independent. For training of the model, a strategy of pre-training on multispeaker dataset then
+fine-tuning on two-speaker pair is used. During fine-tuning, discriminators are further introduced and a generative
+adversarial network (GAN) loss is used to prevent the predicted features from being over-smoothed. Our method achieved
+higher similarity over the strong baseline that achieved first place in Voice Conversion Challenge 2018. We also
+conducted ablation studies to confirm several designation in our proposed method.
+<p>&nbsp;</p>
+<hr>
+<h3>0. Ground truth target samples</h3>
+<table border="1">
+  <tr>
+  <td width="120px">&nbsp;
+  
+  </td>
+    <td colspan="2"><blockquote>
+    
+              <p align="center">slt</p>
+          
+    </blockquote></td>
+    <td colspan="2"><blockquote>
+     
+              <p align="center">rms</p>
+           
+    </blockquote></td>
+  </tr>
+  <tr>
+    <td><div align="center">source</div></td>
+    <td><audio src="wavs/rms-to-slt/truth/rms-arctic_a0058.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="wavs/rms-to-slt/truth/rms-arctic_a0138.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="wavs/slt-to-rms/truth/slt-arctic_b0247.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td><audio src="wavs/slt-to-rms/truth/slt-arctic_b0496.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center">target</div></td>
+    <td width="149">
+    <audio src="wavs/rms-to-slt/truth/slt-arctic_a0058.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio>
+    </td>
+    <td width="147"><audio src="wavs/rms-to-slt/truth/slt-arctic_a0138.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td width="151"><audio src="wavs/slt-to-rms/truth/rms-arctic_b0247.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/truth/rms-arctic_b0496.wav" controls="controls">
+        Your browser does not support the audio tag.
+    </audio></td>
+  </tr>
+</table>
+
+<h3>&nbsp;</h3>
+<h3>1. Comparsion of proposed method to baseline methods</h3>
+<p>&nbsp;</p>
+<table border="1">
+  <tr>
+    <td><div align="center">Methods</div></td>
+    <td colspan="2"><p align="center">rms-to-slt</p></td>
+    <td colspan="2"><p align="center">slt-to-rms</p></td>
+  </tr>
+  <tr>
+    <td width="120">Rec-Syn</td>
+    <td width="169"><audio src="wavs/rms-to-slt/rec-syn/Wav_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="187"><audio src="wavs/rms-to-slt/rec-syn/Wav_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="155"><audio src="wavs/slt-to-rms/rec-syn/Wav_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="157"><audio src="wavs/slt-to-rms/rec-syn/Wav_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td>VCC2018</td>
+    <td><audio src="wavs/rms-to-slt/vcc2018/vcc2018-a0058.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/rms-to-slt/vcc2018/vcc2018-a0138.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/vcc2018/vcc2018-b0247.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/vcc2018/vcc2018-b0496.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><em>Proposed</em></td>
+    <td><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h3>2. Reducing size of training data for adaptation</h3>
+<table border="1">
+  <tr>
+    <td width="120px"><div align="center">Size of data</div></td>
+    <td colspan="2"><div align="center">rms-to-slt</div></td>
+    <td colspan="2"><div align="center">slt-to-rms</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">500</div></td>
+    <td><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center">300</div></td>
+   <td width="156"><audio src="wavs/rms-to-slt/proposed_300/Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/proposed_300/Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/proposed_300/Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/proposed_300/Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center">100</div></td>
+    <td width="156"><audio src="wavs/rms-to-slt/proposed_100/Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/proposed_100/Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/proposed_100/Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/proposed_100/Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+</table>
+<p>&nbsp;</p>
+<h3>3.Ablation studies</h3>
+<table border="1">
+  <tr>
+    <td width="140"><div align="center">Methods</div></td>
+    <td colspan="2"><div align="center">rms-to-slt</div></td>
+    <td colspan="2"><div align="center">slt-to-rms</div></td>
+  </tr>
+  <tr>
+    <td><div align="center">Proposed</div></td>
+    <td width="156"><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/proposed/Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/proposed/Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>-adv</em></div></td>
+   <td width="156"><audio src="wavs/rms-to-slt/ablation/noadv-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/ablation/noadv-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/ablation/noadv-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/ablation/noadv-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>-text</em></div></td>
+   <td width="156"><audio src="wavs/rms-to-slt/ablation/notext-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/ablation/notext-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/ablation/notext-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/ablation/notext-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>-adv-text</em></div></td>
+   <td width="156"><audio src="wavs/rms-to-slt/ablation/notext-noadv-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/ablation/notext-noadv-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/ablation/notext-noadv-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/ablation/notext-noadv-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center">-GAN</div></td>
+    <td><audio src="wavs/rms-to-slt/ablation/nogan-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/rms-to-slt/ablation/nogan-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/nogan-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/nogan-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>-pre-training</em></div></td>
+    <td width="156"><audio src="wavs/rms-to-slt/ablation/no-pretrain-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="153"><audio src="wavs/rms-to-slt/ablation/no-pretrain-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="149"><audio src="wavs/slt-to-rms/ablation/no-pretrain-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td width="173"><audio src="wavs/slt-to-rms/ablation/no-pretrain-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>fixrec</em></div></td>
+    <td><audio src="wavs/rms-to-slt/ablation/fixenc-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/rms-to-slt/ablation/fixenc-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/fixenc-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/fixenc-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+</table>
+<p>&quot;<em>-adv</em>&quot;,  &quot;<em>-text</em>&quot; represent the proposed method without using adversarial training,  text classification loss respectively. &quot;-pre-training&quot; represents the proposed method without using pre-training strategy. &quot;-GAN&quot; represents the proposed method without using GAN loss. &quot;fixrec&quot; represents fix the recognizer after pre-training and only fine-tuning the synthesizer.</p>
+<p>&nbsp;</p>
+
+
+</body></html>
