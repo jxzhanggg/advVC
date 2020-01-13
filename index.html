@@ -173,11 +173,18 @@ conducted ablation studies to confirm several designation in our proposed method
     <td width="173"><audio src="wavs/slt-to-rms/ablation/notext-noadv-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
   </tr>
   <tr>
-    <td><div align="center">-GAN</div></td>
+    <td><div align="center"><em>-GAN</em></div></td>
     <td><audio src="wavs/rms-to-slt/ablation/nogan-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
     <td><audio src="wavs/rms-to-slt/ablation/nogan-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
     <td><audio src="wavs/slt-to-rms/ablation/nogan-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
     <td><audio src="wavs/slt-to-rms/ablation/nogan-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+  </tr>
+  <tr>
+    <td><div align="center"><em>-joint</em></div></td>
+    <td><audio src="wavs/rms-to-slt/ablation/nojoint-Wav_arctic_a0058_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/rms-to-slt/ablation/nojoint-Wav_arctic_a0138_ref_slt.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/nojoint-Wav_arctic_b0247_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
+    <td><audio src="wavs/slt-to-rms/ablation/nojoint-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
   </tr>
   <tr>
     <td><div align="center"><em>-pre-training</em></div></td>
@@ -194,7 +201,7 @@ conducted ablation studies to confirm several designation in our proposed method
     <td><audio src="wavs/slt-to-rms/ablation/fixenc-Wav_arctic_b0496_ref_rms.wav" controls="controls"> Your browser does not support the audio tag. </audio></td>
   </tr>
 </table>
-<p>&quot;<em>-adv</em>&quot;,  &quot;<em>-text</em>&quot; represent the proposed method without using adversarial training,  text classification loss respectively. &quot;-pre-training&quot; represents the proposed method without using pre-training strategy. &quot;-GAN&quot; represents the proposed method without using GAN loss. &quot;fixrec&quot; represents fix the recognizer after pre-training and only fine-tuning the synthesizer.</p>
+<p>&quot;<em>-adv</em>&quot;,  &quot;<em>-text</em>&quot; represent the proposed method without using adversarial training,  text classification loss respectively. &quot;<em>-pre-training</em>&quot; represents the proposed method without using pre-training strategy. &quot;<em>-GAN</em>&quot; represents the proposed method finetuning without  GAN loss. &quot;<em>-joint</em>&quot;represents training the recognizer and synthesizer separately without joint optimization. &quot;<em>fixrec</em>&quot; represents fix the recognizer after pre-training and only fine-tuning the synthesizer.</p>
 <p>&nbsp;</p>
 
 
